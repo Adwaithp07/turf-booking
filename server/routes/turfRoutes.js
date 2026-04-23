@@ -13,6 +13,7 @@ router.get("/", async (req, res) => {
     const turfs = await Turf.find();
     res.json(turfs);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ message: "Error fetching turfs" });
   }
 });
